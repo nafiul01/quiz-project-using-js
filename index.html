@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body class="flex justify-center items-center h-screen bg-gradient-to-r from-cyan-800 to-blue-700">
+    <div class="h-[600px] w-screen m-5 max-w-[400px] bg-white opacity-90 rounded-xl py-5 px-10">
+        
+        <!-- Quiz Intro -->
+        <section class="flex justify-center flex-col gap-10 items-center h-[100%]" id="quiz-intro">
+            <h1 class="text-3xl font-bold text-orange">QUIZ</h1>
+            <a class="btn-primary" id="join-button" href="#">Join</a>
+        </section>
+
+        <!-- Rules -->
+        <section class="grid content-between h-[100%] hidden" id="rules">
+            <div>
+                <h1 class="text-center text-3xl font-medium pb-5 border-gray-300 border-b-2">Rules for the quiz</h1>
+                <ul class="text-xl font-thin grid gap-3 pt-5">
+                    <li>* No negative marking.</li>
+                    <li>* No go back.</li>
+                    <li>* 1 mark for each question.</li>
+                    <li>* Total 5 question.</li>
+                </ul>
+            </div>
+            <div class="flex justify-between">
+                <a id="go-back" class="btn-primary" href="#">Go back</a>
+                <a id="start-now" class="btn-primary" href="#">Start Now</a>
+            </div>
+        </section>
+
+        <!-- Questions -->
+        <section class="grid content-between h-[100%] hidden" id="question">
+            <div>
+                <h1 class="text-center text-xl font-medium pb-5 border-gray-300 border-b-2" >Question No <span id="question_no">1</span></h1>
+                <h1 class="text-center text-2xl font-medium my-8" id="question_html"></h1>
+                <div class="text-center p-3 flex flex-col gap-5 justify-center rounded-xl" id="question_option"></div>
+                <div class="btn-option hidden bg-green-500 bg-red-500 pointer-events-none"></div>
+                
+            </div>
+            <div class="flex justify-end">
+                <a id="next" class="btn-primary" href="#">Next</a>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <section class="grid content-center h-[100%] hidden" id="result">
+            <div class="grid justify-center gap-5 pb-5">
+                <h1 class="text-3xl font-medium">Your score is:</h1>
+                <p class="text-center text-4xl" id="score"></p>
+            </div>
+            <div class="flex justify-center">
+                <a id="restart" class="btn-primary" href="#">Restart</a>
+            </div>
+        </section>
+
+    </div>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
