@@ -316,7 +316,7 @@ function questionCounter(index){
 
 function optionSelected(answer){
     let userAns = answer.textContent;
-    let correctAns = questions[counter].answer;
+    let correctAns = questions[numArray[counter]].answer;
     let allOptions = questionOption.children.length;
 
     if (userAns == correctAns){
